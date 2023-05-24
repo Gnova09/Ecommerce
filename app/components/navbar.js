@@ -22,7 +22,7 @@ export const Navbar = () => {
     ]
 
     return (
-        <nav class="bg-primary  text-letters fixed bg-white w-full z-20 top-0 left-0 border-gray-600">
+        <nav class="bg-primary  text-letters  bg-white w-full z-20 top-0 left-0 border-gray-600">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
                 <div class="hidden flex-row w-full md:block md:w-auto" id="navbar-default">
