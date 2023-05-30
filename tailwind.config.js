@@ -13,8 +13,11 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        marquee: 'marquee 25s linear infinite',
-        marquee2: 'marquee2 25s linear infinite',
+       
+        'spin-slow-30': 'spin 30s linear infinite',
+        'spin-slow-25': 'spin 25s linear infinite',
+        'spin-slow-10': 'spin 10s linear infinite',
+        'marquee-infinite' : 'marquee 50s linear infinite',
       },
       keyframes: {
         marquee: {
