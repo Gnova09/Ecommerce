@@ -1,9 +1,6 @@
 import React from 'react'
-import item1 from "../../assets/home/gorro.png"
-import item2 from "../../assets/home/tshirt.png"
-import Image from 'next/image'
-import { ItemsMarque } from './itemsMarque'
 
+import { ItemsMarque } from './itemsMarque'
 
 export const ItemsMarquee = () => {
     return (

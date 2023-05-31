@@ -8,15 +8,15 @@ export const Navbar = () => {
     const links = [
         {
             label: "All",
-            route: "/"
+            route: "/pages/products"
         },
         {
             label: "Womans",
-            route: "/"
+            route: "/pages/products"
         },
         {
             label: "Mans",
-            route: "/"
+            route: "/pages/products"
         },
         
     ]
