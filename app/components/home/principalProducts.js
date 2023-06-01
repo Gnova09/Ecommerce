@@ -17,11 +17,12 @@ export const PrincipalProducts = () => {
                 </div>
                 <div className='w-full h-full flex '>
                     <div className='flex justify-center w-full bottom-0 h-full  '>
-                        <Image  src={modelo} alt="modelo" className='w-auto bottom-0 p-0 m-0 h-auto ' />
+                        <Image  src={modelo} alt="modelo" className='w-auto bottom-0 p-0 m-0 h-auto transition duration-300 ease-in-out hover:scale-105  ' />
 
                     </div>
                 </div>
             </div>
+            
             <div className='flex flex-col h-full  w-1/3'>
 
                 <div className='h-1/2 bg-red-600 w-full flex'>
@@ -35,7 +36,7 @@ export const PrincipalProducts = () => {
 
                         <div className='flex items-center justify-center w-full h-full '>
 
-                            <Image src={polo} alt="modelo" className='w-fit h-3/4 ' />
+                            <Image src={polo} alt="modelo" className='w-fit h-3/4 transition duration-300 ease-in-out hover:scale-105 ' />
                         </div>
                     </div>
                 </div>
@@ -51,7 +52,7 @@ export const PrincipalProducts = () => {
 
                         <div className='flex items-center justify-center w-full h-full '>
 
-                            <Image src={vestido} alt="modelo" className='w-fit h-3/4 ' />
+                            <Image src={vestido} alt="modelo" className='w-fit h-3/4 transition duration-300 ease-in-out hover:scale-105 ' />
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import React from 'react'
+
 import ColeccionItems from './components/coleccionItems'
-
-
+import ListOfProducts from './components/listOfProducts'
 
 const ProductsPage = () => {
     const categoria = {
@@ -27,14 +27,13 @@ const ProductsPage = () => {
         ]
     }
 
-
     return (
         <div className=' flex flex-row p-10 gap-10'>
 
             <ColeccionItems props={categoria} />
 
-            <div className='w-4/5 bg-slate-600'>
-
+            <div className='grid grid-flow-row w-full gap-4 p-2 grid-cols-2 lg:grid-cols-3   m-0'>
+               <ListOfProducts />
             </div>
 
             <ColeccionItems props={orden} />
