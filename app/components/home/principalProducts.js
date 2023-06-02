@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import modelo from "../../assets/home/modelo.png"
-import polo from "../../assets/home/tshirt.png"
-import vestido from "../../assets/home/vestido.png"
+
 
 export const PrincipalProducts = () => {
     return (
@@ -17,7 +15,7 @@ export const PrincipalProducts = () => {
                 </div>
                 <div className='w-full h-full flex '>
                     <div className='flex justify-center w-full bottom-0 h-full  '>
-                        <Image  src={modelo} alt="modelo" className='w-auto bottom-0 p-0 m-0 h-auto transition duration-300 ease-in-out hover:scale-105  ' />
+                        <img src="/home/modelo.png" alt="modelo" className='w-auto bottom-0 p-0 m-0 h-auto transition duration-300 ease-in-out hover:scale-105  ' />
 
                     </div>
                 </div>
@@ -36,7 +34,7 @@ export const PrincipalProducts = () => {
 
                         <div className='flex items-center justify-center w-full h-full '>
 
-                            <Image src={polo} alt="modelo" className='w-fit h-3/4 transition duration-300 ease-in-out hover:scale-105 ' />
+                            <img src="/home/tshirt.png" alt="modelo" className='w-fit h-3/4 transition duration-300 ease-in-out hover:scale-105 ' />
                         </div>
                     </div>
                 </div>
@@ -52,7 +50,7 @@ export const PrincipalProducts = () => {
 
                         <div className='flex items-center justify-center w-full h-full '>
 
-                            <Image src={vestido} alt="modelo" className='w-fit h-3/4 transition duration-300 ease-in-out hover:scale-105 ' />
+                            <img src="/home/vestido.png" alt="modelo" className='w-fit h-3/4 transition duration-300 ease-in-out hover:scale-105 ' />
                         </div>
                     </div>
                 </div>

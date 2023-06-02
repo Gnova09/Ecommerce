@@ -29,7 +29,7 @@ export const Navbar = () => {
                     <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
                         <li>
                             <Link href="/" class="flex items-center">
-                                <img src={'../favicon.ico'} class="h-8 mr-3" alt="Flowbite Logo" />
+                                <img src='../favicon.ico' class="h-8 mr-3" alt="Flowbite Logo" />
                             </Link>
                         </li>
                         {

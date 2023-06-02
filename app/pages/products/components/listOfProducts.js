@@ -6,76 +6,123 @@ const ListOfProducts = () => {
 
     const products = [
         {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
+            id:1,
+            img: "/home/vestido.png",
+            productName: "Vestido Amarillo",
             price: 25,
-            ruta: "#"
+            ruta: "#",
+            type:[
+                {
+                    name:"COLOR",
+                    items:[
+                        "Negro","Blanco", "Azul"
+                    ]
+                },
+                {
+                    name:"SIZE",
+                    items:[
+                        "XS","S", "M","L","XL"
+                    ]
+                },
+            ]
         },
         {
-            img: require("../../../assets/home/tshirt.png"),
+            id:2,
+            img: "/home/tshirt.png",
             productName: "TShirt",
             price: 50,
-            ruta: "#"
+            ruta: "#",
+            type:[
+                {
+                    name:"COLOR",
+                    items:[
+                        "Negro","Blanco", "Azul"
+                    ]
+                },
+                {
+                    name:"SIZE",
+                    items:[
+                        "XS","S", "M","L","XL"
+                    ]
+                },
+            ]
         },
         {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
+            id:3,
+            img: "/home/gorro.png",
+            productName: "Gorro frio",
             price: 30,
-            ruta: "#"
+            ruta: "#",
+            type:[
+                {
+                    name:"COLOR",
+                    items:[
+                        "Negro","Blanco", "Azul"
+                    ]
+                },
+                {
+                    name:"SIZE",
+                    items:[
+                        "XS","S", "M","L","XL"
+                    ]
+                },
+            ]
         },
         {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
-            price: 30,
-            ruta: "#"
+            id:4,
+            img: "/home/vestido.png",
+            productName: "Vestodo Amarrillo",
+            price: 50,
+            ruta: "#",
+            type:[
+                {
+                    name:"COLOR",
+                    items:[
+                        "Negro","Blanco", "Azul"
+                    ]
+                },
+                {
+                    name:"SIZE",
+                    items:[
+                        "XS","S", "M","L","XL"
+                    ]
+                },
+            ]
         },
         {
-            img: require("../../../assets/home/tshirt.png"),
+            id:5,
+            img: "/home/tshirt.png",
             productName: "TShirt",
             price: 30,
-            ruta: "#"
+            ruta: "#",
+            type:[
+                {
+                    name:"COLOR",
+                    items:[
+                        "Negro","Blanco", "Azul"
+                    ]
+                },
+                {
+                    name:"SIZE",
+                    items:[
+                        "XS","S", "M","L","XL"
+                    ]
+                },
+            ]
         },
-        {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
-            price: 30,
-            ruta: "#"
-        },
-        {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
-            price: 30,
-            ruta: "#"
-        },
-        {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
-            price: 30,
-            ruta: "#"
-        },
-        {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
-            price: 30,
-            ruta: "#"
-        },
-        {
-            img: require("../../../assets/home/tshirt.png"),
-            productName: "TShirt",
-            price: 30,
-            ruta: "#"
-        },
+       
     ]
 
     return (
         <>
             {
-                products.map(({ img, productName, price }) => {
+                products.map(({ img, productName, price, id }) => {
                     return (
                         <Product
                             img={img}
                             productName={productName}
                             price={price}
+                            id={id}
                         />
                     )
                 })
