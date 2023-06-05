@@ -1,5 +1,6 @@
 import { Footer } from './components/footer'
 import { Navbar } from './components/navbar'
+import { AppContextProvider } from './context/context'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -12,14 +13,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
+    <AppContextProvider>
 
-        {children}
-        
-        <Footer />
+      <html lang="en">
+        <body className={inter.className}>
+          <Navbar />
+
+          {children}
+
+          <Footer />
         </body>
-    </html>
+      </html>
+    </AppContextProvider>
   )
 }
