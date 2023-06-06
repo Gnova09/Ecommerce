@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { SearchBar } from './searchBar'
-import Cart from './cart'
+import Cart from './cart/cart'
 
 
 export const Navbar = () => {
@@ -19,7 +19,7 @@ export const Navbar = () => {
             label: "Mans",
             route: "/pages/products"
         },
-        
+
     ]
 
     return (

@@ -1,11 +1,10 @@
 "use client"
 
-import Link from 'next/link'
 import React from 'react'
-import TypeItems from './components/typeItems'
 import ListOfType from './components/listOfType'
 import ProductPrincipal from './components/productPrincipal'
 import ListOfProducts from '../components/listOfProducts'
+import useAppContext from '@/app/context/context'
 
 const products = [
     {
@@ -120,7 +119,9 @@ const ProductDetail = ({ params }) => {
 
     const { idproduct } = params
 
-    const producto = products.find(produ => produ.id === Number(idproduct))
+    const { productos } = useAppContext();
+
+    const producto = productos.find(produ => produ.id === Number(idproduct))
 
     return (
         <div className='flex flex-col'>
@@ -131,7 +132,6 @@ const ProductDetail = ({ params }) => {
                 <div className='flex flex-col h-full w-1/3 p-3 gap-10' >
 
                     <ListOfType product={...producto} />
-
 
                     <p className='w-full'>
                         Descripicon del producto

@@ -1,47 +1,242 @@
 "use client"
 
-import React, {createContext, useContext} from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
 
 
 //Context
-export const AppContext = createContext({});
+export const AppContext = createContext();
 
 //Provider
 export const AppContextProvider = ({ children }) => {
     //Estados de mi aplicacion
-    const [user, setUser] = React.useState("userdata!");
-    const [cart, setCart] = React.useState({});
-    const [variableState, setVariableState] = React.useState(false);
-    const [isOpen, setIsOpen] = React.useState(true);
-    
+    const [user, setUser] = useState("userdata!");
+    const [productos, setProductos] = useState([
+        {
+            id: 1,
+            img: "/home/vestido.png",
+            productName: "Vestido Amarillo",
+            price: 25,
+            ruta: "#",
+            type: [
+                {
+                    name: "COLOR",
+                    items: [
+                        "Negro", "Blanco", "Azul"
+                    ]
+                },
+                {
+                    name: "SIZE",
+                    items: [
+                        "XS", "S", "M", "L", "XL"
+                    ]
+                },
+            ]
+        },
+        {
+            id: 2,
+            img: "/home/tshirt.png",
+            productName: "TShirt",
+            price: 50,
+            ruta: "#",
+            type: [
+                {
+                    name: "COLOR",
+                    items: [
+                        "Negro", "Blanco", "Azul"
+                    ]
+                },
+                {
+                    name: "SIZE",
+                    items: [
+                        "XS", "S", "M", "L", "XL"
+                    ]
+                },
+            ]
+        },
+        {
+            id: 3,
+            img: "/home/gorro.png",
+            productName: "Gorro frio",
+            price: 30,
+            ruta: "#",
+            type: [
+                {
+                    name: "COLOR",
+                    items: [
+                        "Negro", "Blanco", "Azul"
+                    ]
+                },
+                {
+                    name: "SIZE",
+                    items: [
+                        "XS", "S", "M", "L", "XL"
+                    ]
+                },
+            ]
+        },
+        {
+            id: 4,
+            img: "/home/vestido.png",
+            productName: "Vestodo Amarrillo",
+            price: 50,
+            ruta: "#",
+            type: [
+                {
+                    name: "COLOR",
+                    items: [
+                        "Negro", "Blanco", "Azul"
+                    ]
+                },
+                {
+                    name: "SIZE",
+                    items: [
+                        "XS", "S", "M", "L", "XL"
+                    ]
+                },
+            ]
+        },
+        {
+            id: 5,
+            img: "/home/tshirt.png",
+            productName: "TShirt",
+            price: 30,
+            ruta: "#",
+            type: [
+                {
+                    name: "COLOR",
+                    items: [
+                        "Negro", "Blanco", "Azul"
+                    ]
+                },
+                {
+                    name: "SIZE",
+                    items: [
+                        "XS", "S", "M", "L", "XL"
+                    ]
+                },
+            ]
+        },
+    ]);
+    const [cart, setCart] = useState(
+        {
+            impuesto: 0,
+            subtotal: 0,
+            total: 0,
+            ListCart: [
+                {
+                    id: 1,
+                    img: "/home/vestido.png",
+                    productName: "Vestido Amarillo",
+                    price: 25,
+                    ruta: "#",
+                    cant: 2,
+                    type: [
+                        {
+                            name: "COLOR",
+                            items: [
+                                "Negro", "Blanco", "Azul"
+                            ]
+                        },
+                        {
+                            name: "SIZE",
+                            items: [
+                                "XS", "S", "M", "L", "XL"
+                            ]
+                        },
+                    ]
+                },
+                {
+                    id: 1,
+                    img: "/home/vestido.png",
+                    productName: "Vestido Amarillo",
+                    price: 25,
+                    ruta: "#",
+                    cant: 1,
+                    type: [
+                        {
+                            name: "COLOR",
+                            items: [
+                                "Negro", "Blanco", "Azul"
+                            ]
+                        },
+                        {
+                            name: "SIZE",
+                            items: [
+                                "XS", "S", "M", "L", "XL"
+                            ]
+                        },
+                    ]
+                },
+                {
+                    id: 2,
+                    img: "/home/tshirt.png",
+                    productName: "TShirt",
+                    price: 50,
+                    cant: 1,
+                    ruta: "#",
+                    type: [
+                        {
+                            name: "COLOR",
+                            items: [
+                                "Negro", "Blanco", "Azul"
+                            ]
+                        },
+                        {
+                            name: "SIZE",
+                            items: [
+                                "XS", "S", "M", "L", "XL"
+                            ]
+                        },
+                    ]
+                },
+                {
+                    id: 3,
+                    img: "/home/gorro.png",
+                    productName: "Gorro frio",
+                    price: 30,
+                    ruta: "#",
+                    cant: 1,
+                    type: [
+                        {
+                            name: "COLOR",
+                            items: [
+                                "Negro", "Blanco", "Azul"
+                            ]
+                        },
+                        {
+                            name: "SIZE",
+                            items: [
+                                "XS", "S", "M", "L", "XL"
+                            ]
+                        },
+                    ]
+                }]
+        });
+
     //ComponentDidMouunt
-    React.useEffect(() => {
-        
+    useEffect(() => {
+
     }, []);
 
     //
-    const values = React.useMemo(() => (
+    const values = useMemo(() => (
         {
-            variableState,      // States que seran visibles en el contexto.
-            setVariableState,   // Funciones que son exportadas para manejo externo.
-            user,
-            setUser,
-            cart,
-            setCart,
-            isOpen, 
-            setIsOpen
+            // Funciones que son exportadas para manejo externo.
+            user, setUser,
+            cart, setCart,
+            productos, setProductos,
         }),
-        [variableState]);   // States que serán visibles en el contexto.
+        []);   // States que serán visibles en el contexto.
 
     // Interface donde será expuesto como proveedor y envolverá la App.
     return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 }
 
 //
-export const useAppContext=()=> {
-    let {isOpen} = useContext(AppContext);
+export const useAppContext = () => {
+    const context = useContext(AppContext);
 
-    if (!isOpen) {
+    if (!context) {
         console.error('Error deploying App Context!!!');
     }
 
