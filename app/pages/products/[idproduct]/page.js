@@ -119,9 +119,14 @@ const ProductDetail = ({ params }) => {
 
     const { idproduct } = params
 
-    const { productos } = useAppContext();
+    const { productos,cart, setCart, } = useAppContext();
 
     const producto = productos.find(produ => produ.id === Number(idproduct))
+    const handleAddCart = () => {
+        let ListCart = cart.ListCart
+        ListCart.push({...producto, cant:1})
+        setCart({...cart. ListCart})
+    }
 
     return (
         <div className='flex flex-col'>
@@ -140,7 +145,7 @@ const ProductDetail = ({ params }) => {
                         Descripicon del producto
                         Descripicon del producto
                     </p>
-                    <button className='w-full bg-black text-white p-2 font-semibold'>ADD TO CART</button>
+                    <button onClick={()=>{handleAddCart()}} className='w-full bg-black text-white p-2 font-semibold'>ADD TO CART</button>
                 </div>
             </div>
 
